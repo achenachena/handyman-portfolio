@@ -81,7 +81,7 @@ The abstract `PortfolioRepository` interface already defines `getServices()`, `g
 
 ## GitHub
 
-<https://github.com/achenachena/mobile_programming>
+<https://github.com/achenachena/handyman-portfolio>
 
 ## Team — Group 5
 
