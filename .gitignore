@@ -1,0 +1,27 @@
+# Flutter / Dart
+.dart_tool/
+.packages
+build/
+*.iml
+.metadata
+
+# IDE
+.idea/
+*.swp
+.vscode/
+
+# macOS
+.DS_Store
+
+# Node (Playwright screenshots)
+node_modules/
+package.json
+package-lock.json
+
+# Generated helpers
+generate_pdf.py
+generate_pptx.py
+take_screenshots.js
+
+# D2L ZIP
+*.zip
