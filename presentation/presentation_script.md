@@ -7,7 +7,7 @@
 
 ## Slide 1 — Title (≈30 s)
 
-Good morning/afternoon everyone. I am Liang Mingchen, presenting on behalf of Group 5.
+Good morning/afternoon everyone. We are Group 5.
 
 Our Challenge 2 project is a **Home Handyman Portfolio** app built with Flutter and Dart.
 The goal, as the handout says, is not to list every detail about a handyman business but to

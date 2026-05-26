@@ -85,4 +85,4 @@ The abstract `PortfolioRepository` interface already defines `getServices()`, `g
 
 ## Team — Group 5
 
-- Liang Mingchen
+*(see D2L for member list)*
