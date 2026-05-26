@@ -52,7 +52,8 @@ lib/
 ## How to run
 
 ```
-cd challenges/challenge-2
+git clone https://github.com/achenachena/handyman-portfolio.git
+cd handyman-portfolio
 flutter pub get
 flutter run            # pick Chrome or an Android emulator
 flutter run -d chrome  # force web
