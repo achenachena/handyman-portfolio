@@ -171,11 +171,9 @@ def build_pdf():
         "    review_card.dart",
         "test/",
         "  widget_test.dart",
-        "docs/",
-        "  FIREBASE_SETUP.md",
-        "firestore.rules",
         "pubspec.yaml",
         "android/ …   ios/ …   web/ …   (Flutter platform scaffolding)",
+        "(Also on GitHub: docs/FIREBASE_SETUP.md, firestore.rules, presentation/)",
     ]
     for line in tree_lines:
         story.append(Paragraph(line, styles["CodeBlock"]))
@@ -196,7 +194,7 @@ def build_pdf():
         "<font face='Courier'>cd handyman-portfolio</font>",
         "<font face='Courier'>flutter pub get</font>",
         "Add <font face='Courier'>android/app/google-services.json</font> from Firebase Console; "
-        "enable Firestore (see <font face='Courier'>docs/FIREBASE_SETUP.md</font>).",
+        "enable Firestore (see Firebase setup in the GitHub repo or course materials).",
         "<font face='Courier'>flutter run</font> — choose an Android emulator or Chrome.",
     ]
     for i, step in enumerate(run_steps, 1):
@@ -231,6 +229,18 @@ def build_pdf():
             img.hAlign = "CENTER"
             story.append(img)
             story.append(Spacer(1, 14))
+
+    story.append(
+        Paragraph(
+            "<b>D2L ZIP (requirement #5):</b> submit only all <font face='Courier'>.dart</font> "
+            "files under <font face='Courier'>lib/</font> and <font face='Courier'>test/</font>, "
+            "screenshot images, and <font face='Courier'>README.pdf</font>. "
+            "Build the archive with <font face='Courier'>package_d2l_zip.sh</font>. "
+            "The full Flutter project stays on GitHub (requirement #4).",
+            styles["Body"],
+        )
+    )
+    story.append(Spacer(1, 8))
 
     story.append(Paragraph("Public GitHub repository", styles["H2"]))
     story.append(

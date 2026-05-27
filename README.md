@@ -133,6 +133,30 @@ If `google-services.json` is missing, the app still runs using **in-memory mock 
 
 Tested with Flutter 3.32+ on macOS.
 
+## D2L submission ZIP (requirement #5)
+
+The course text says the D2L package must include **all your Dart files + Images +
+README.PDF** — not the whole Android Studio tree (that belongs on **public GitHub**,
+requirement #4).
+
+From this directory:
+
+```bash
+./package_d2l_zip.sh
+```
+
+That writes **`HandymanPortfolio-Challenge2.zip`** with **only**:
+
+- every **`*.dart`** file under **`lib/`** and **`test/`** (folder layout preserved),
+- the three **`screenshot-*.png`** images,
+- **`README.pdf`**.
+
+There is **no** `android/`, `pubspec.yaml`, `presentation/`, or other files inside that
+ZIP. To **build or run** the app, graders clone the **GitHub** repo (link in README.pdf).
+
+Regenerate **`README.pdf`** after README edits: `pip install reportlab` then
+`python3 generate_pdf.py`.
+
 ## Tests
 
 ```

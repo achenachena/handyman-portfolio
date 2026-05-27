@@ -22,5 +22,9 @@ package-lock.json
 # Optional local helpers (tracked versions may exist for team use)
 take_screenshots.js
 
-# D2L ZIP
+# D2L ZIP (local upload artifact)
 *.zip
+
+# Accidental extracts of HandymanPortfolio-Challenge2.zip (repo root is this folder)
+/handyman_portfolio/
+/handyman_portfolio */
