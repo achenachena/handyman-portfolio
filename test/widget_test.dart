@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:handyman_portfolio/main.dart';
+import 'package:handyman_portfolio/app_entry.dart';
 
 void main() {
   testWidgets('App shell renders with Home tab selected', (tester) async {
-    await tester.pumpWidget(const HandymanApp());
+    await tester.pumpWidget(const AppEntry(forceMock: true));
     await tester.pumpAndSettle();
 
     expect(find.text('Home'), findsWidgets);
@@ -13,7 +13,7 @@ void main() {
   });
 
   testWidgets('Bottom nav switches to Services tab', (tester) async {
-    await tester.pumpWidget(const HandymanApp());
+    await tester.pumpWidget(const AppEntry(forceMock: true));
     await tester.pumpAndSettle();
 
     await tester.tap(find.text('Services').last);
@@ -23,7 +23,7 @@ void main() {
   });
 
   testWidgets('Bottom nav switches to Portfolio tab', (tester) async {
-    await tester.pumpWidget(const HandymanApp());
+    await tester.pumpWidget(const AppEntry(forceMock: true));
     await tester.pumpAndSettle();
 
     await tester.tap(find.text('Portfolio').last);
@@ -33,7 +33,7 @@ void main() {
   });
 
   testWidgets('Bottom nav switches to Reviews tab', (tester) async {
-    await tester.pumpWidget(const HandymanApp());
+    await tester.pumpWidget(const AppEntry(forceMock: true));
     await tester.pumpAndSettle();
 
     await tester.tap(find.text('Reviews').last);
@@ -43,7 +43,7 @@ void main() {
   });
 
   testWidgets('Bottom nav switches to Contact tab', (tester) async {
-    await tester.pumpWidget(const HandymanApp());
+    await tester.pumpWidget(const AppEntry(forceMock: true));
     await tester.pumpAndSettle();
 
     await tester.tap(find.text('Contact').last);
@@ -53,7 +53,7 @@ void main() {
   });
 
   testWidgets('About page is accessible via info button', (tester) async {
-    await tester.pumpWidget(const HandymanApp());
+    await tester.pumpWidget(const AppEntry(forceMock: true));
     await tester.pumpAndSettle();
 
     await tester.tap(find.byIcon(Icons.info_outline));
@@ -64,7 +64,7 @@ void main() {
   });
 
   testWidgets('Contact form validates empty fields', (tester) async {
-    await tester.pumpWidget(const HandymanApp());
+    await tester.pumpWidget(const AppEntry(forceMock: true));
     await tester.pumpAndSettle();
 
     await tester.tap(find.text('Contact').last);

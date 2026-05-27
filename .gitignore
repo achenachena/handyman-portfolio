@@ -4,6 +4,7 @@
 build/
 *.iml
 .metadata
+.flutter-plugins-dependencies
 
 # IDE
 .idea/
@@ -18,9 +19,7 @@ node_modules/
 package.json
 package-lock.json
 
-# Generated helpers
-generate_pdf.py
-generate_pptx.py
+# Optional local helpers (tracked versions may exist for team use)
 take_screenshots.js
 
 # D2L ZIP

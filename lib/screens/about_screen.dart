@@ -10,6 +10,7 @@ class AboutScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return ListView(
+      primary: false,
       padding: const EdgeInsets.fromLTRB(16, 16, 16, 32),
       children: [
         // Avatar / icon area

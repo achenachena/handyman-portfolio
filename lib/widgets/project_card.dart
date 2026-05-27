@@ -17,20 +17,43 @@ class ProjectCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Placeholder image area
-          Container(
+          SizedBox(
             height: 140,
             width: double.infinity,
-            color: project.placeholderColor.withValues(alpha: 0.15),
             child: Stack(
+              fit: StackFit.expand,
               children: [
-                Center(
-                  child: Icon(
-                    Icons.image_outlined,
-                    size: 48,
-                    color: project.placeholderColor.withValues(alpha: 0.4),
-                  ),
+                ColoredBox(
+                  color: project.placeholderColor.withValues(alpha: 0.12),
                 ),
+                if (project.imageUrl != null)
+                  Image.network(
+                    project.imageUrl!,
+                    fit: BoxFit.cover,
+                    width: double.infinity,
+                    height: 140,
+                    loadingBuilder: (context, child, loadingProgress) {
+                      if (loadingProgress == null) return child;
+                      return Center(
+                        child: SizedBox(
+                          width: 28,
+                          height: 28,
+                          child: CircularProgressIndicator(
+                            strokeWidth: 2,
+                            color: project.placeholderColor,
+                            value: loadingProgress.expectedTotalBytes != null
+                                ? loadingProgress.cumulativeBytesLoaded /
+                                    loadingProgress.expectedTotalBytes!
+                                : null,
+                          ),
+                        ),
+                      );
+                    },
+                    errorBuilder: (context, error, stackTrace) =>
+                        _PlaceholderLayer(project: project),
+                  )
+                else
+                  _PlaceholderLayer(project: project),
                 if (project.beforeLabel != null && project.afterLabel != null)
                   Positioned(
                     bottom: 8,
@@ -89,6 +112,22 @@ class ProjectCard extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class _PlaceholderLayer extends StatelessWidget {
+  const _PlaceholderLayer({required this.project});
+  final Project project;
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Icon(
+        Icons.image_outlined,
+        size: 48,
+        color: project.placeholderColor.withValues(alpha: 0.4),
       ),
     );
   }

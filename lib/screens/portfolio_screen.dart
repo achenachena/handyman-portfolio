@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../data/mock_data.dart';
+import '../portfolio_scope.dart';
 import '../widgets/project_card.dart';
 
 class PortfolioScreen extends StatelessWidget {
@@ -9,7 +9,9 @@ class PortfolioScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final projects = PortfolioScope.of(context).projects;
     return ListView(
+      primary: false,
       padding: const EdgeInsets.fromLTRB(16, 16, 16, 32),
       children: [
         Text(
@@ -26,7 +28,7 @@ class PortfolioScreen extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 16),
-        ...kProjects.map(
+        ...projects.map(
           (p) => Padding(
             padding: const EdgeInsets.only(bottom: 12),
             child: ProjectCard(project: p),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../data/mock_data.dart';
-import '../data/mock_portfolio_repository.dart';
+import '../portfolio_scope.dart';
 
 class ContactScreen extends StatefulWidget {
   const ContactScreen({super.key});
@@ -29,7 +29,7 @@ class _ContactScreenState extends State<ContactScreen> {
     if (!_formKey.currentState!.validate()) return;
     setState(() => _sending = true);
 
-    await MockPortfolioRepository().submitContact(
+    await PortfolioScope.of(context).repository.submitContact(
       name: _nameCtrl.text.trim(),
       email: _emailCtrl.text.trim(),
       message: _msgCtrl.text.trim(),
@@ -52,6 +52,7 @@ class _ContactScreenState extends State<ContactScreen> {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return ListView(
+      primary: false,
       padding: const EdgeInsets.fromLTRB(16, 16, 16, 32),
       children: [
         Text(

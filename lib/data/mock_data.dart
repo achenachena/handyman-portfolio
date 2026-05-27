@@ -49,6 +49,7 @@ const kServices = <Service>[
   ),
 ];
 
+// Portfolio header photos: Unsplash (https://unsplash.com/license) — demo only.
 const kProjects = <Project>[
   Project(
     id: 'p1',
@@ -56,6 +57,8 @@ const kProjects = <Project>[
     category: 'Tiling',
     description: 'Removed old laminate and installed subway tile across a 12-foot kitchen wall. Included custom grout color matching.',
     placeholderColor: Color(0xFFDC2626),
+    imageUrl:
+        'https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=900&q=80',
     beforeLabel: 'Peeling laminate',
     afterLabel: 'Clean subway tile',
   ),
@@ -65,6 +68,8 @@ const kProjects = <Project>[
     category: 'Plumbing',
     description: 'Ran new supply and drain lines for a basement half-bath addition. Passed city inspection on first visit.',
     placeholderColor: Color(0xFF2563EB),
+    // Picsum (reliable); swap for your own photo in production.
+    imageUrl: 'https://picsum.photos/seed/handyman-p2-plumbing/900/500',
   ),
   Project(
     id: 'p3',
@@ -72,6 +77,8 @@ const kProjects = <Project>[
     category: 'Painting',
     description: 'Pressure-washed, primed, and applied two coats of exterior latex on a two-storey home. Trim and shutters included.',
     placeholderColor: Color(0xFF059669),
+    imageUrl:
+        'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=900&q=80',
     beforeLabel: 'Faded siding',
     afterLabel: 'Fresh two-coat finish',
   ),
@@ -81,6 +88,8 @@ const kProjects = <Project>[
     category: 'Carpentry',
     description: 'Designed and built floor-to-ceiling shelving for a home office using birch plywood and hardwood trim.',
     placeholderColor: Color(0xFF7C3AED),
+    imageUrl:
+        'https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=900&q=80',
   ),
   Project(
     id: 'p5',
@@ -88,6 +97,7 @@ const kProjects = <Project>[
     category: 'Electrical',
     description: 'Upgraded an aging 100-amp panel to 200 amps, added dedicated circuits for workshop and EV charger.',
     placeholderColor: Color(0xFFD97706),
+    imageUrl: 'https://picsum.photos/seed/handyman-p5-electrical/900/500',
   ),
   Project(
     id: 'p6',
@@ -95,6 +105,8 @@ const kProjects = <Project>[
     category: 'General Repairs',
     description: 'Replaced rotted boards, re-fastened railing, sanded, and sealed a 300 sq ft backyard deck.',
     placeholderColor: Color(0xFF0891B2),
+    imageUrl:
+        'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80',
     beforeLabel: 'Rotted planks',
     afterLabel: 'Sealed and level',
   ),
@@ -142,6 +154,27 @@ const kReviews = <Review>[
     rating: 4.5,
     comment: 'Repainted our entire house exterior. Neighbors keep asking who did the work.',
     date: 'Nov 2025',
+  ),
+  Review(
+    id: 'r7',
+    name: 'Chris L.',
+    rating: 5.0,
+    comment: 'Replaced several windows and re-caulked the frames before winter. No drafts this year — huge difference on heating bills.',
+    date: 'Oct 2025',
+  ),
+  Review(
+    id: 'r8',
+    name: 'Amanda F.',
+    rating: 4.5,
+    comment: 'Mounted our TV and hid the cables in the wall. Looks very clean and he double-checked the stud placement.',
+    date: 'Sep 2025',
+  ),
+  Review(
+    id: 'r9',
+    name: 'Robert H.',
+    rating: 4.0,
+    comment: 'General handyman day: fixed a squeaky door, tightened cabinet hinges, and patched a hole in drywall. Good value.',
+    date: 'Aug 2025',
   ),
 ];
 
